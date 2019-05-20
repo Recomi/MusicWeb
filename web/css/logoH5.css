@@ -1,0 +1,40 @@
+/*H5 Logo*/
+body{
+    margin:10px;
+    padding:10px;
+}
+div{
+    position: absolute;
+}
+.bg{
+    width:1000px;
+    height:700px;
+    background: rgba(90, 41, 100, 0.11);
+}
+.beam{
+    width: 2000px;
+    height: 25px;
+    background: #ffffff;
+    top: 320px;
+    left: -500px;
+}
+.logo{
+    transform: skewx(20deg);
+    width:400px;
+    height:350px;
+    background: rgba(0, 72, 121, 0.61);
+}
+.logo_space_horizontal{
+    top:170px;
+    width:500px;
+    height: 20px;
+    background: #ffffff;
+}
+.logo_space_vertical{
+    top:180px;
+    left:0px;
+    transform: rotate(90deg);
+    width: 400px;
+    height:20px;
+    background: #ffffff;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>下载</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" href="css/foot.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.ma{
+				position: fixed;
+			    z-index: 10;
+			    position: absolute;
+			    right: 22px;
+			    top: 395px;
+			    background: #fff;
+			    border: 1px solid #ccc9;
+			    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+			    opacity: 0.75;
+			    filter: Alpha(opacity=75);
+			}
+			.box{
+				width: 100%;
+				margin: 0 auto;
+				background: white;
+				height: 480px;
+				background: url(img/app/bg.jpg);
+				background-size: cover;
+			}
+			.content{
+				width: 380px;
+				margin: 0 auto;
+				height: 100%;
+				padding: 0;
+				display: flex;
+			}
+			.txt{
+				font-size: 45px;
+				float: none;
+				width:380px;
+				height: 60px;
+				margin: 0 0 0 13px;
+				position: absolute;
+				color: #FFFFFF;
+				/*font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;*/
+			}
+			.txt p{
+				margin-top: 30px;
+			}
+			.right{
+				top: 180px;
+				width:380px;
+				height: 240px;
+				margin: 0;
+				position: absolute;
+				/*margin-left: 265px;
+				margin-top: 100px;*/
+			}
+
+			.right>a {
+			    float: left;
+			    display: block;
+			    width: 170px;
+			    height: 40px;
+			    margin-bottom: 14px;
+			    margin-left: 13px;
+			    background-position: 0 0;
+			    color: #fff;
+			    font-size: 15px;
+			    font-family: Arial, Helvetica, sans-serif;
+			    line-height: 40px;
+			    background: url(img/app/down_btn.png) 155px 150px;
+			}
+			.right>a:hover{
+				background: url(img/app/down_btn.png) 155px 100px;
+			}
+			em, i {
+			    font-style: normal;
+			    text-align: left;
+			    font-size: inherit;
+			}
+			.android i{
+				background: url(img/app/down_btn.png) 155px 50px;
+			    float: left;
+			    width: 22px;
+			    height: 40px;
+			    margin: 0 12px;
+				vertical-align:middle;
+				}
+			.iphone i{
+				background: url(img/app/down_btn.png) 185px 50px;
+			    float: left;
+			    width: 22px;
+			    height: 40px;
+			    margin: 0 12px;
+				vertical-align:middle;
+				}
+			.Win i{
+				background: url(img/app/down_btn.png) 215px 50px;
+			    float: left;
+			    width: 22px;
+			    height: 40px;
+			    margin: 0 12px;
+				vertical-align:middle;
+				}
+			.Linux i{
+				background: url(img/app/down_btn.png) 85px 50px;
+			    float: left;
+			    width: 22px;
+			    height: 40px;
+			    margin: 0 12px;
+				vertical-align:middle;
+				}
+			.dld{
+				float: left;
+				color: white;
+			}
+			.version {
+			    float: right;
+			    padding-right: 15px;
+			    font-size: 12px;
+			    color: #fafcfc;
+			    letter-spacing: 1px;
+			    opacity: .66;
+			    filter: Alpha(opacity=66);
+			}
+			.pclog a{
+				width: 77px;
+				height: 14px;
+				font-size: 10px;
+				line-height: 14px;
+				color: white;
+				margin-left: 20px;
+			}
+			.n-dncnt{
+				width: 100%;
+				height: 438px;
+				float: right;
+			}
+			.n-dncnt2 {
+			    background: #f8f8f8;
+			}
+			.wrap-app{
+				width: 80%;
+				height: 193px;
+			    margin: 0 auto;
+			    margin-top: 0px;
+			    margin-right: auto;
+			    margin-bottom: 0px;
+			    margin-left: auto;
+			    padding-top: 120px;
+			}
+			.wrap2{
+				width: 80%;
+				height: 292px;
+			    margin: 0 auto;
+			    margin-top: 0px;
+			    margin-right: auto;
+			    margin-bottom: 0px;
+			    margin-left: auto;
+			    padding-top: 120px;
+			}
+			.wrap3{
+				width: 80%;
+				height: 358px;
+			    margin: 0 auto;
+			    margin-top: 0px;
+			    margin-right: auto;
+			    margin-bottom: 0px;
+			    margin-left: auto;
+			    padding-top: 120px;
+			}
+			.lt{
+				float: left;
+    			margin-left: 30px;
+			}
+			.f-ff2{
+				font-size: 40px;
+			    font-weight: normal;
+			    padding: 45px 0 0 0;
+			    padding-top: 45px;
+			    padding-right: 0px;
+			    padding-bottom: 0px;
+			    padding-left: 0px;
+			    margin: 0;
+			    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+			}
+			.des{
+				font-size: 16px;
+			    color: #666;
+			    line-height: 24px;
+			    height: auto;
+			    margin-top: 5px;
+			    float: right;
+			}
+			.rt{
+				margin-right: 57px;
+				float: right;
+				padding-top: 0px;
+			}
+			.cnt2 {
+    			padding-top: 106px;
+    			height: 272px;
+			}
+			.tit{
+				font-size: 40px;
+			    font-weight: normal;
+			    padding: 45px 0 5px 0;
+			}
+			.rrr{
+				float: right;
+			}
+			.des em{
+				color: #cc0000;
+			}
+			.lt p{
+				padding-top: 10px;
+				float: left;
+			}
+			.rrr p{
+				padding-top: 10px;
+				float: left;
+			}
+			@media (max-width: 750px) {
+				.lt img,.rt img{
+					display: inline-block;
+					float: none;
+					position: center;
+				}
+				.wrap-app,.wrap2,.wrap3{
+					width: 100vw;
+				}
+				.n-dncnt{
+					height: auto;
+				}
+				.n-dncnt2{
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ma">
+			<img alt="http://music.163.com" src="img/app/ma.PNG">
+			<p>扫描二维码下载</p>
+		</div>
+		
+		<div class="box">
+			<div class="content">
+				<div class="txt">
+					<p>动心音乐，<br />时刻与你相伴</p>
+				</div>
+				<div class="right">
+					<a class="android"><i></i><em class="dld">安卓版</em><em class="version">5.7.2V</em></a>
+					<a class="iphone"><i></i><em class="dld">iphone</em><em class="version">5.7.2V</em></a><br /><br /><br />
+					<a class="iphone"><i></i><em class="dld">iPai版</em><em class="version">5.7.2V</em></a>
+					<a class="iphone"><i></i><em class="dld">Mac版</em><em class="version">5.7.2V</em></a><br /><br /><br />
+					<a class="Win"><i></i><em class="dld">PC版</em><em class="version">5.7.2V</em></a>
+					<a class="Win"><i></i><em class="dld">UWP版</em><em class="version">5.7.2V</em></a><br /><br /><br />
+					<a class="Win"><i></i><em class="dld">WP版</em><em class="version">5.7.2V</em></a>
+					<a class="Linux"><i></i><em class="dld">Linux版</em><em class="version">5.7.2V</em></a>
+					<div class="pclog">
+						<a href="/pcupdatelog" target="_blank" class="pcu f-tdn" name="网易云音乐" title="PC版更新日志"><em></em><span>PC版更新日志</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="n-dncnt">
+			<div class="wrap-app cnt1 f-cb">
+				<div class="lt">
+					<h3 class="f-ff2">千万曲库 首首CD音质</h3>
+					<p class="des">
+						囊括百万无损SQ音乐，你在用手机听歌时，
+						<br>
+						也能感受到纤毫毕现的CD音质，更能免费离线收听
+					</p>
+				</div>
+				<div class="rt">
+					<img class="f-cb" usemap="#testtool" src="img/app/b1.jpg" alt="千万曲库 首首CD音质">
+				</div>
+			</div>
+		</div>
+		<div class="n-dncnt n-dncnt2">
+			<div class="wrap-app f-cb cnt2">
+				<div class="lt">
+					<img src="img/app/b2.jpg" alt="千位明星，亲自推荐音乐"/>
+				</div>
+				<div class="rrr">
+					<h3 class="tit f-ff2">千位明星 亲自推荐音乐</h3>
+					<p class="des">
+						陶喆，羽泉等<em>千位明星已入驻</em>，亲自创建私房歌单，录制独
+						<br>
+						家DJ节目，推荐他们心中的好音乐
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="n-dncnt">
+			<div class="wrap2 cnt1 f-cb">
+				<div class="lt">
+					<h3 class="f-ff2">社交关系 发现全新音乐</h3>
+					<p class="des f-ff2">
+						你可以<em>关注明星</em>、DJ和好友，通过浏览他们的动态、收藏和
+						<br>
+						分享，发现更多全新好音乐
+					</p>
+				</div>
+				<div class="rt">
+					<img class="f-cb" usemap="#testtool" src="img/app/b3.jpg" alt="社交关系 发现全新音乐">
+				</div>
+			</div>
+		</div>
+		<div class="n-dncnt n-dncnt2">
+			<div class="wrap-app f-cb cnt2">
+				<div class="lt">
+					<img src="img/app/b4.jpg" alt="手机电脑 歌单实时同步"/>
+				</div>
+				<div class="rrr">
+					<h3 class="tit f-ff2">手机电脑 歌单实时同步</h3>
+					<p class="des f-ff2">
+						只要一个帐号，你就可以同步在手机、电脑上创建、收藏
+						<br>
+						的歌单，<em>随时随地畅享好音乐</em>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="n-dncnt">
+			<div class="wrap3 cnt1 f-cb">
+				<div class="lt">
+					<h3 class="f-ff2">听歌识曲 助你疯狂猜歌</h3>
+					<p class="des f-ff2">
+						歌曲很动听却不知道歌名，歌名在嘴边却想不起来……
+						<br>
+						用<em>听歌识曲</em>功能，几秒钟就知道歌名
+					</p>
+				</div>
+				<div class="rt">
+					<img class="f-cb" usemap="#testtool" src="img/app/b5.jpg" alt="听歌识曲 助你疯狂猜歌">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

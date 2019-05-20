@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomi-Fun in Find</title>
+    <link href="css/MyWeb/main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        function hide(id) {
+            var obj = document.getElementById(id).style;
+            obj.visibility="hidden";
+            // obj.opacity="0";
+        }
+        function slide_display(id) {
+            var obj = document.getElementById(id).style;
+            obj.visibility="visible";
+            // obj.opacity="1";
+        }
+        function slide_over_headicon(id) {
+            var obj = document.getElementById(id).style;
+            obj.transform = "translateY(10px)";
+            obj.width = "60px";
+            obj.height = "60px";
+        }
+        function slide_hide_headicon(id) {
+            var obj = document.getElementById(id).style;
+            obj.transform = "";
+            obj.width = "40px";
+            obj.height = "40px";
+        }
+    </script>
+</head>
+<body>
+<section id="main-container">
+    <div class="openNav"></div>
+    <div class="page">
+        <header class="card-white site-top">
+            <div id="top-nav">
+                <div id="top-items">
+                    <ul>
+                        <a class="nav-a top-nav-a" href="Frist.html">首頁</a>
+                        <a class="nav-a top-nav-a" href="Second.html">Web1</a>
+                        <a class="nav-a top-nav-a" href="CanvasTest1.html">Web2</a>
+                        <a class="nav-a top-nav-a" href="Frist.html">Web3</a>
+                        <a class="nav-a top-nav-a" href="Frist.html">Web4</a>
+                        <a class="nav-a top-nav-a" href="Frist.html">Web5</a>
+                        <a class="nav-a top-nav-a" href="Frist.html">Web6</a>
+                    </ul>
+                </div>
+                <!--<div id="top-search-box">search</div>-->
+                <div id="button-login" class="nav-button"><a  href="Login.jsp">servlet.SignUp</a></div>
+                <div id="headicon" onmouseleave="hide('bubble-login');slide_hide_headicon('top-headicon-img')" >
+                    <div id="headicon-item" onmouseover="slide_display('bubble-login');slide_over_headicon('top-headicon-img')">
+                        <img id="top-headicon-img" class="headicon-img" src="res/昙花.png"/>
+                    </div>
+                    <div class="card-white bubble-nav-account" id="bubble-login">
+                        <div class="login-text">快来加入我们吧！</div>
+                        <a class="card-white login-button" href="Login.jsp">登陆</a>
+                        <a class="card-white login-button" href="#">注册</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="site-main">
+            <div class="card-white side">
+                <div class="side-nav">
+                    <ul>
+                        <li class="nav-a side-a">A</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-white content-container">
+                <div class="content">
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-block">
+                <img class="end-img" src="https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/footer.png"/>
+                <div class="fooder-end">
+                    <div class="fooder-text">Copyright ©2018 recomi<br/>
+                        【事实并非理所当然❤️世界总是欲盖弥彰】
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ROOT_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web" />
+          <element id="library" level="application" name="jquery" />
+          <element id="library" level="application" name="bootstrap" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.46-bin" />
+          <element id="library" level="project" name="java-json" />
+          <element id="library" level="project" name="okhttp-3.11.0" />
+          <element id="library" level="project" name="okio-1.13.0" />
+          <element id="library" level="project" name="gson-2.8.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Web/web/Web" />
+      <element id="javaee-facet-resources" facet="Web/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>
